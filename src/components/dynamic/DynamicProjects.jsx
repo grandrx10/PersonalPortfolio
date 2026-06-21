@@ -81,7 +81,7 @@ export default function DynamicProjects() {
         <AnimatePresence mode="popLayout">
           {filtered.map((project) => {
             const imgs = getImages(project)
-            const hasLinks = project.liveUrl || project.repoUrl
+            const hasLinks = project.liveUrl || project.demoUrl || project.repoUrl
             return (
               <motion.article
                 key={project.title}
@@ -141,6 +141,17 @@ export default function DynamicProjects() {
                           className="text-indigo-600 hover:text-indigo-800"
                         >
                           Live ↗
+                        </a>
+                      )}
+                      {project.demoUrl && (
+                        <a
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="text-indigo-600 hover:text-indigo-800"
+                        >
+                          Demo ↗
                         </a>
                       )}
                       {project.repoUrl && (
@@ -282,11 +293,16 @@ export default function DynamicProjects() {
                     ))}
                   </ul>
                 )}
-                {(selected.liveUrl || selected.repoUrl) && (
+                {(selected.liveUrl || selected.demoUrl || selected.repoUrl) && (
                   <div className="mt-5 flex gap-4 text-sm font-medium">
                     {selected.liveUrl && (
                       <a href={selected.liveUrl} target="_blank" rel="noreferrer" className="text-indigo-600 hover:text-indigo-800">
                         Live ↗
+                      </a>
+                    )}
+                    {selected.demoUrl && (
+                      <a href={selected.demoUrl} target="_blank" rel="noreferrer" className="text-indigo-600 hover:text-indigo-800">
+                        Demo ↗
                       </a>
                     )}
                     {selected.repoUrl && (

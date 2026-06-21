@@ -3,7 +3,7 @@ import { motion } from 'motion/react'
 // Animated, slowly drifting gradient blobs behind everything. Pure eye-candy.
 export default function Aurora() {
   return (
-    <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+    <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
       <motion.div
         className="absolute -top-32 -left-32 h-[40rem] w-[40rem] rounded-full bg-indigo-300/40 blur-3xl"
         animate={{ x: [0, 80, 0], y: [0, 60, 0] }}

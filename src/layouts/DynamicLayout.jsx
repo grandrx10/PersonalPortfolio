@@ -21,7 +21,7 @@ export default function DynamicLayout() {
         <DynamicContact />
       </main>
       <footer className="border-t border-slate-200 py-8 text-center text-sm text-slate-500">
-        Built with React, Tailwind &amp; Motion · Hosted on GitHub Pages
+        Built with React, Tailwind &amp; Motion · Hosted on Vercel
       </footer>
     </div>
   )

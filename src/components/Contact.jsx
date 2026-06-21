@@ -1,7 +1,7 @@
 const socials = [
-  { label: 'Email', href: 'mailto:richard.yang@geomechanica.com' },
-  { label: 'GitHub', href: 'https://github.com/yourname' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/yourname' },
+  { label: 'Email', href: 'mailto:richardyrq.yang@mail.utoronto.ca' },
+  { label: 'GitHub', href: 'https://github.com/grandrx10' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/richard-yang-36217b11b/' },
 ]
 
 export default function Contact() {

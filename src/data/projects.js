@@ -44,6 +44,22 @@ export const projects = [
     repoUrl: 'https://github.com/grandrx10/grandrx10.github.io',
   },
   {
+    title: 'Irazu Assistant',
+    date: 'November 2025',
+    description:
+      'A RAG-powered documentation chatbot for Geomechanica\'s Irazu software, built in Python. It grounds OpenAI GPT responses in 100+ internal documents and serves as a first point of contact for user software questions.',
+    details: [
+      'Built a RAG pipeline in Python with FAISS for vector similarity search, indexing 100+ internal documents to ground responses in real product documentation.',
+      'Added memory recollection and context awareness so the assistant follows multi-turn conversations rather than treating each question in isolation.',
+      'Served the chatbot via a REST endpoint integrated into the Irazu portal UI, giving users a first point of contact for software questions.',
+      "(For NDA reasons I cannot show the chatbot's reply here)"
+    ],
+    images: ['/images/irazu-assistant.png'],
+    tags: ['Python', 'RAG', 'FAISS', 'OpenAI', 'REST API'],
+    liveUrl: '',
+    repoUrl: '',
+  },
+  {
     title: 'AI Cubed (AI³) — UTMIST AI² 2025 Tournament Agent (3rd place winner)',
     date: '2025',
     description:
@@ -61,5 +77,55 @@ export const projects = [
     image: '/images/ai-cubed.png',
     liveUrl: '',
     repoUrl: 'https://github.com/grandrx10/UTMIST-AI2',
+  },
+  {
+    title: 'Eresta',
+    date: 'May 2026',
+    description:
+      'A 2.5D multiplayer horror / survival game set aboard a derelict space station, built in Unity 6. Each match assigns players one of three roles — Lower Class, Upper Class, or a single Creature — and a raycast-driven darkness system keeps most of the station hidden until you light it up.',
+    details: [
+      'Server-authoritative multiplayer over Netcode for GameObjects in a Host/Client topology, with matchmaking through Unity Relay, Lobby, and Authentication services.',
+      'Role system assigns exactly one Creature plus a ~60/40 split of Lower and Upper Class players server-side, each with distinct win conditions.',
+      'Vision / darkness built from an owner-only raycast vision cone rendered to a RenderTexture and composited by a custom URP renderer feature, so players only see what falls inside their line of sight.',
+      'Proximity voice chat via Vivox with distance- and wall-based occlusion, so audio fades naturally through the station.',
+      'Server-side hit detection (SphereCast) paired with client-side fake bullets for zero-latency visuals, plus a server-authoritative NetworkList inventory with loot tables, keycard access, and interactive doors.',
+      'Orbiting fixed-angle follow camera with a wall-fade shader, and post-processing (film grain, vignette, scanlines, chromatic aberration) for a gritty retro look.',
+    ],
+    tags: ['Unity 6', 'C#', 'Netcode for GameObjects', 'URP', 'Vivox', 'Multiplayer'],
+    images: [
+      'https://github.com/user-attachments/assets/82821c05-b5fe-41eb-9d86-e84a802e37af',
+      'https://github.com/user-attachments/assets/2bc9428e-93fa-4ac2-9040-d6f5e98e578a',
+      'https://github.com/user-attachments/assets/c3a29107-ff62-48b0-9b23-614a03e4e6c8',
+      'https://github.com/user-attachments/assets/e03336e8-7b24-442d-8482-60189638f963',
+      'https://github.com/user-attachments/assets/0dac34f7-2eff-43b6-9946-04667ba78314'
+    ],
+    liveUrl: '',
+    demoUrl: 'https://drive.google.com/file/d/1Xv-4WC_c9qCn9cbDTDmYnzbW5rq9Z-xk/view?usp=sharing',
+    repoUrl: 'https://github.com/grandrx10/Eresta',
+  },
+  {
+    title: 'Fractured (1st place — GDDC Winter 2025 Game Jam)',
+    date: 'Winter 2025',
+    description:
+      'A 3D action-adventure game built in Unity 6 where everything is a card. Cards aren\'t just menu items — they\'re throwable, usable objects that drive combat, puzzles, and world interaction through a flexible, composition-based behavior system. Won 1st place at the GDDC Winter 2025 Game Jam.',
+    details: [
+      'Won 1st place at the GDDC Winter 2025 Game Jam.',
+      'Built around a small set of composable abstractions: Behaviors (ScriptableObjects defining a single card interaction), Cards (containers for behaviors with UI and state), Agents (managing a hand and deck of cards), and Environments (systems that interact with agents and manage temporary state like health and mana).',
+      'Cards carry any number of Behaviors that define how they interact with the world — throwing, healing, attacking, triggering effects — supporting both composition and inheritance via Behavior Tags (interfaces that cards filter by for clean polymorphic interactions).',
+      'The same card framework powers combat against bosses and minions, a wide range of puzzle minigames (fishing, cooking, pipe puzzles, reflectors, pressure plates, weight pulleys), and open-world exploration across seasonal domains with NPCs and dialogue.',
+      'Includes a Default Behaviors system (fallback behaviors substituted at init), async card selection so environments can request cards from agents, and a GlobalState singleton storing game state as Events, Strings, Integers, and Tuples.',
+      'Built with URP and volumetric fog, the Unity Input System, Cinemachine, AI Navigation, Animation Rigging, ProBuilder, and Visual Effect Graph, plus third-party tools including OpenFracture, Noisy Nodes, and LeanTween.',
+    ],
+    tags: ['Unity 6', 'C#', 'URP', 'ScriptableObjects', 'Game Design'],
+    images: [
+      'https://github.com/user-attachments/assets/138e0071-755d-4717-a442-866188e17b30',
+      'https://github.com/user-attachments/assets/0af3655e-a84e-4b92-ae54-fa0acfa4f5b3',
+      'https://github.com/user-attachments/assets/dc78c272-7016-43ef-a2a7-84bc9cc4e4a1',
+      'https://github.com/user-attachments/assets/ce2fa528-78e4-4cb5-9223-337c5f893a7f',
+      'https://github.com/user-attachments/assets/b0f60164-49fe-4c1c-bf72-4b8dfcdc0ad5',
+    ],
+    liveUrl: 'https://fmwofmwmf.itch.io/card/download/oz6kIGEbDTDu33xKrge8883jP9Admuj0fMTtGQ91',
+    demoUrl: 'https://youtu.be/iiJcUfR9C-g',
+    repoUrl: '',
   },
 ]

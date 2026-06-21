@@ -19,9 +19,9 @@ export const experience = [
     ],
     tags: ['React', 'Python', 'RAG', 'AWS', 'Docker'],
     photos: [
-      '/images/experience/geo-1.svg',
-      '/images/experience/geo-2.svg',
-      '/images/experience/geo-3.svg',
+      // '/images/experience/geo-1.svg',
+      // '/images/experience/geo-2.svg',
+      // '/images/experience/geo-3.svg',
     ],
   },
   {
@@ -36,8 +36,8 @@ export const experience = [
     ],
     tags: ['Python', 'R', 'Machine Learning'],
     photos: [
-      '/images/experience/wain-1.svg',
-      '/images/experience/wain-2.svg',
+      // '/images/experience/wain-1.svg',
+      // '/images/experience/wain-2.svg',
     ],
   },
   {

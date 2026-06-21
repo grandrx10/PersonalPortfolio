@@ -14,7 +14,7 @@ export default function DynamicContact() {
           Let's build something.
         </h2>
         <p className="mx-auto mt-5 max-w-md text-slate-600">
-          I'm always open to new projects and conversations. Reach out anytime.
+          I'm always open to new projects ideas and conversations. Reach out anytime.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           {socials.map((s) => (

@@ -2,4 +2,11 @@
 
 html {
   scroll-behavior: smooth;
+  /* Match the layout's bg-slate-50 so any overscroll/bounce past the page
+     edges reveals this solid color instead of the Aurora layer behind it. */
+  background-color: #f8fafc;
+}
+
+body {
+  background-color: #f8fafc;
 }
