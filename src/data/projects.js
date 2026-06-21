@@ -52,7 +52,6 @@ export const projects = [
       'Built a RAG pipeline in Python with FAISS for vector similarity search, indexing 100+ internal documents to ground responses in real product documentation.',
       'Added memory recollection and context awareness so the assistant follows multi-turn conversations rather than treating each question in isolation.',
       'Served the chatbot via a REST endpoint integrated into the Irazu portal UI, giving users a first point of contact for software questions.',
-      "(For NDA reasons I cannot show the chatbot's reply here)"
     ],
     images: ['/images/irazu-assistant.png'],
     tags: ['Python', 'RAG', 'FAISS', 'OpenAI', 'REST API'],
