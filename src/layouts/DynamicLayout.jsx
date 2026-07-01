@@ -3,6 +3,7 @@ import DynamicNav from '../components/dynamic/DynamicNav.jsx'
 import DynamicHero from '../components/dynamic/DynamicHero.jsx'
 import DynamicAbout from '../components/dynamic/DynamicAbout.jsx'
 import DynamicExperience from '../components/dynamic/DynamicExperience.jsx'
+import DynamicAwards from '../components/dynamic/DynamicAwards.jsx'
 import DynamicProjects from '../components/dynamic/DynamicProjects.jsx'
 import DynamicContact from '../components/dynamic/DynamicContact.jsx'
 
@@ -18,6 +19,7 @@ export default function DynamicLayout() {
         <DynamicAbout />
         <DynamicExperience />
         <DynamicProjects />
+        <DynamicAwards />
         <DynamicContact />
       </main>
       <footer className="border-t border-slate-200 py-8 text-center text-sm text-slate-500">

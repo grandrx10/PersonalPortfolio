@@ -75,6 +75,7 @@ export const projects = [
     tags: ['Python', 'NumPy', 'State Machine', 'Game AI'],
     image: '/images/ai-cubed.png',
     liveUrl: '',
+    demoUrl: 'https://www.youtube.com/live/mZT_RHlAO7U?t=10762',
     repoUrl: 'https://github.com/grandrx10/UTMIST-AI2',
   },
   {

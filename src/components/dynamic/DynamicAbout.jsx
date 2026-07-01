@@ -25,12 +25,12 @@ const stats = [
   { value: '3.96', label: 'GPA' },
   { value: '100+', label: 'Daily users shipped' },
   { value: '3×', label: 'Hackathon awards' },
-  { value: '16 mo', label: 'Industry experience' },
+  { value: '2 years', label: 'Industry experience' },
 ]
 
 export default function DynamicAbout() {
   return (
-    <section id="about" className="mx-auto max-w-6xl px-6 py-24">
+  <section id="about" className="mx-auto max-w-6xl px-6 py-24">
       <div className="grid items-center gap-12 md:grid-cols-5">
         {/* Draggable photo collage — drag a photo and it springs back; click to enlarge */}
         <Reveal className="md:col-span-2">

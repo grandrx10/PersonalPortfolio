@@ -13,11 +13,14 @@ export const experience = [
     period: 'May 2025 – Present',
     image: '/images/experience/geomechanica.svg',
     points: [
-      'Built an end-to-end React.js licensing platform with REST APIs for user and license management, serving 100+ daily users',
-      'Engineered an AI chatbot with a Python RAG pipeline for context-aware document retrieval and responses.',
-      'Maintained 99.9% uptime for the Geomechanica Portal on AWS EC2 using Docker and Code Deploy (CI / CD)',
+      'Developed and launched a full-stack React.js, Node.js, and PostgreSQL licensing platform with REST APIs for user provisioning, license management, and access control, supporting 100+ daily business users.',
+      'Implemented an automated PostgreSQL backup and restore system using AWS S3 and Bash, ensuring data reliability and recovery for the licensing platform.',
+      'Ensured 99.9% uptime for the Geomechanica Portal by maintaining Dockerized deployments on AWS EC2 and automating releases through AWS CodeDeploy CI/CD pipelines.',
+      "Implemented UI fixes and geomechanical simulation calculations for Irazu, Geomechanica's software, using C++ and Qt6.",
+      'Authored unit tests using Jest and conducted code reviews for the licensing portal, ensuring consistent code quality.',
+      'Collaborated with senior engineers to deliver new features and resolve bugs across Irazu and the licensing portal.',
     ],
-    tags: ['React', 'Python', 'RAG', 'AWS', 'Docker'],
+    tags: ['React', 'Node.js', 'PostgreSQL', 'C++', 'Qt6', 'AWS', 'Docker', 'Jest'],
     photos: [
       // '/images/experience/geo-1.svg',
       // '/images/experience/geo-2.svg',
@@ -31,8 +34,7 @@ export const experience = [
     period: 'May 2024 – May 2025',
     image: '/images/experience/wainberg.svg',
     points: [
-      'Developed new clustering algorithms to efficiently categorize brain cell types from single-cell RNA data.',
-      'Used machine learning, Python, and R to process and visualize data from the Allen Institute.',
+      'Built Python- and R-based data processing and visualization workflows to classify large-scale single-cell RNA datasets and translate machine learning outputs into interpretable research insights.',
     ],
     tags: ['Python', 'R', 'Machine Learning'],
     photos: [
@@ -61,8 +63,8 @@ export const experience = [
     period: 'September 2020 – January 2021',
     image: '/images/experience/hatch.svg',
     points: [
-      'Edited and revised 60+ projects on the Hatch platform using p5.js and JavaScript.',
-      'Created an interactive lesson series teaching students to build a platformer in JavaScript.',
+      'Revised and optimized 60+ interactive coding projects on the Hatch platform using p5.js and JavaScript to improve student learning outcomes.',
+      'Built an interactive coding lesson series teaching students how to create a platformer in JavaScript, reaching 100+ views.',
       'Handled administrative tasks such as organizing and curating projects.',
     ],
     tags: ['JavaScript', 'p5.js'],
