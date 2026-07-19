@@ -28,6 +28,20 @@ export const experience = [
     ],
   },
   {
+    role: 'Full Stack Software Engineering Intern',
+    company: 'THRIVE',
+    link: '',
+    period: '2024 – 2025 (4 months)',
+    image: '/images/experience/thrive.svg',
+    points: [
+      'Used React Native to build a mobile application for managing wellness and mental health with 50+ users.',
+      'Implemented friend search, profiles, and group chat backend systems with Python and PostgreSQL.',
+    ],
+    tags: ['React Native', 'Python', 'PostgreSQL'],
+    photos: [
+    ],
+  },
+  {
     role: 'Undergraduate Researcher',
     company: 'Wainberg Lab',
     link: 'https://wainberglab.org/people',

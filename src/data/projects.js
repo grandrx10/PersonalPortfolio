@@ -128,4 +128,55 @@ export const projects = [
     demoUrl: 'https://youtu.be/iiJcUfR9C-g',
     repoUrl: '',
   },
+  {
+    title: 'Tavern Chat',
+    description:
+      'A social web app where users gather in themed tavern rooms to chat, hang out on live voice, and vote on a shared YouTube music queue — complete with pixel-character avatars and a turn-based multiplayer billiards minigame, Wizard Pool.',
+    details: [
+      'React (Vite) front end backed by Firebase: email/password auth with unique display names (claimed via Firestore transactions), Firestore for taverns / chat / music queue / profiles, and Realtime Database for live presence.',
+      'Live voice via LiveKit with per-person volume sliders, speaking-glow indicators, and a master music volume — tokens minted by a small server endpoint (deployed as a Vercel serverless function) so API secrets never reach the browser.',
+      'Synced YouTube jukebox: the tavern doc stores nowPlaying { videoId, startedAt } and every client seeks to now − startedAt; the earliest-joined patron acts as host and advances the queue. Includes voting, vote-to-skip (instant for keeper/adder, else >50%), and auto-advance.',
+      'Tavern keeper features: create up to 3 taverns, configurable bar stools, uploadable backgrounds with letterboxing and a readability scrim, plus moderation tools (kick, force-skip).',
+      '🎱 Wizard Pool: up to 8 players, each with their own named/colored ball, plus special balls — 🔥 fireball explosions, ⚡ lightning bolts, and a 💀 deathball. Physics runs on a custom canvas engine with a fixed timestep.',
+      'Shots are broadcast as tiny records (inputs + the shooter\'s authoritative outcome) rather than frame streams — every client re-simulates the shot from the same seeded inputs to render the motion, then reconciles to the authoritative resting positions so game state never diverges.',
+    ],
+    tags: ['React', 'Firebase', 'LiveKit', 'Vercel', 'WebSockets', 'Canvas'],
+    image: 'https://github.com/user-attachments/assets/ea798cd9-fe2c-4aff-ab0d-487a2bcf4b18',
+    liveUrl: '',
+    repoUrl: '',
+  },
+  {
+    title: 'D&D SRD Rules Assistant',
+    description:
+      'A fully local, free retrieval-augmented question-answering system for the D&D 5e System Reference Document. Ask a rules question in plain English and it retrieves the relevant SRD passages and streams a cited answer from a local LLM — or says the SRD doesn\'t cover it.',
+    details: [
+      'End-to-end RAG pipeline in Python: pymupdf extraction with two-column reading-order preservation and heading detection, structure-aware chunking (one chunk per heading with breadcrumb section paths), bge-small embeddings cached to disk, NumPy cosine top-k retrieval, and grounded generation via Ollama (llama3.1:8b).',
+      'Chunking is tuned to the embedding model: bge-small truncates around 512 tokens, so chunks are capped at 300 words — most spells and conditions stay intact, and only long entries are windowed with a 50-word overlap.',
+      'React + TypeScript (Vite) web UI over a thin FastAPI wrapper that reuses the exact same retrieval and generation code as the CLI. Sources render first (rank, similarity bar, page, breadcrumb, expandable text), then the answer streams in token-by-token over Server-Sent Events with clickable inline citations that scroll to the matching source card.',
+      'Stays completely offline and free: no CDNs, no paid APIs — even markdown rendering is a small in-repo renderer rather than a library.',
+      'Measured retrieval quality on a hand-authored 28-question eval set phrased naturally rather than echoing section names: recall@5 of 0.929 and MRR of 0.851.',
+    ],
+    tags: ['Python', 'RAG', 'Ollama', 'FastAPI', 'React', 'TypeScript'],
+    image: 'https://github.com/user-attachments/assets/a1c4e001-3d7b-41d8-8ab1-ad1e7a36e1f9',
+    liveUrl: '',
+    demoUrl: 'https://youtu.be/Ne8Df15HaKA',
+    repoUrl: '',
+  },
+  {
+    title: 'Project Sera',
+    description:
+      'A single-player, text-only narrative game played at an old CRT terminal. You talk with Sera — an artificial companion left alone for years — and the night ends one of two ways. A fine-tuned local LLM plays Sera, wrapped in a deterministic state machine that directs the story.',
+    details: [
+      'Actor/director architecture: a local LLM (llama3.1:8b via Ollama) is "the actor" playing Sera, while a hand-written Python finite state machine is "the director" that owns the story beats — a warm reunion, hurt at being abandoned, doubt about being real, and a final timed bargain.',
+      'An LLM-as-judge scores each player turn into a hidden trust score that drives FSM transitions; the judge uses Ollama\'s enforced-JSON output and fails closed, so a parse error leaves trust and story state untouched.',
+      'The director runs fully without a model — transitions are pure functions and the judge is mockable — so the FSM and trust logic are unit tested with no LLM required.',
+      'Primary UI is a React CRT web terminal (green phosphor, scanlines, flicker, typed-out text, a power-down at the end) driven over a WebSocket by FastAPI; a Textual TUI is also included.',
+      'QLoRA fine-tuning pipeline (Unsloth) exports a GGUF adapter registered with Ollama, plus a baseline-vs-fine-tune eval harness reporting in-character rate, beat discipline, and trust calibration.',
+      'Actor and judge share one quantized model so everything fits on an 8GB laptop GPU with no VRAM thrashing.',
+    ],
+    tags: ['Python', 'LLM Fine-tuning', 'QLoRA', 'Ollama', 'FastAPI', 'React'],
+    image: 'https://github.com/user-attachments/assets/9ec66875-aaa5-4821-8891-a52130ae8a4c',
+    liveUrl: '',
+    repoUrl: '',
+  },
 ]
