@@ -142,7 +142,7 @@ export const projects = [
     ],
     tags: ['React', 'Firebase', 'LiveKit', 'Vercel', 'WebSockets', 'Canvas'],
     image: 'https://github.com/user-attachments/assets/ea798cd9-fe2c-4aff-ab0d-487a2bcf4b18',
-    liveUrl: '',
+    liveUrl: 'https://tavern-chat.vercel.app/',
     repoUrl: '',
   },
   {
