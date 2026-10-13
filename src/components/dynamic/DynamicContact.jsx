@@ -1,7 +1,7 @@
 import Reveal from './Reveal.jsx'
 
 const socials = [
-  { label: 'Email', href: 'mailto:richard.yang@geomechanica.com' },
+  { label: 'Email', href: 'mailto:richardyrq.yang@mail.utoronto.ca' },
   { label: 'GitHub', href: 'https://github.com/grandrx10' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/richard-yrq-yang/' },
 ]
