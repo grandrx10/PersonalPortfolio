@@ -2,8 +2,8 @@ import Reveal from './Reveal.jsx'
 
 const socials = [
   { label: 'Email', href: 'mailto:richard.yang@geomechanica.com' },
-  { label: 'GitHub', href: 'https://github.com/yourname' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/yourname' },
+  { label: 'GitHub', href: 'https://github.com/grandrx10' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/richard-yrq-yang/' },
 ]
 
 export default function DynamicContact() {
